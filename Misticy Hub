@@ -1,0 +1,115 @@
+--Misticy Hub
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Misticy Hub | https://discord.gg/usm8UmF5gd", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://87017526111765",
+	PremiumOnly = false
+
+})
+
+local Section = MainTab:AddSection({
+	Name = "👥 Player"
+})
+
+MainTab:AddButton({
+	Name = "🎩 Esp Box",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LinusUser4455/Mistico-Hub/refs/heads/main/Esp%20Box"))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "🎯 View Aim",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nosssa/NossLock/main/VinGUI"))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "🏹 Teleport Gui",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Teleport%20Gui.lua'))()
+  	end    
+})
+
+local Section = MainTab:AddSection({
+	Name = "🔖 Misc"
+})
+
+MainTab:AddButton({
+	Name = "🌍 Sky Block",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LinusUser4455/Mistico-Hub/refs/heads/main/SkyBox"))()
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "🥏 Crosshair",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+local PlayerTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://130866585091615",
+	PremiumOnly = false
+})
+
+local Section = PlayerTab:AddSection({
+	Name = "🎮 Xitus"
+})
+
+PlayerTab:AddButton({
+	Name = "💉 Aimlock",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LinusUser4455/Mistico-Hub/refs/heads/main/Camlock"))()
+  	end    
+})
+
+PlayerTab:AddButton({
+	Name = "💣 Hitbox Head",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LinusUser4455/Mistico-Hub/refs/heads/main/Hitbox"))()
+  	end    
+})
+
+PlayerTab:AddButton({
+	Name = "🔗 Silent Aim",
+	Callback = function()
+        if not Game:IsLoaded() then Game.Loaded:Wait() end --> DO NOT DELETE
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua",true))() --> DO NOT DELETE
+         
+        --> Silent Aim | Global Table <--
+        getgenv().Silent = {
+            Settings = {
+                Toggled = true,
+                AimPart = "HumanoidRootPart", --> HumanoidRootPart, UpperTorso, LowerTorso, Head <-- Main Parts
+                HitChance = 100, 
+         
+                Prediction = {
+                    Enabled = true,
+                    Horizontal = 0.13745, --> X, Z
+                    Vertical = 0.13745, --> Y
+                },
+         
+                Circle = {
+                    Visible = true,
+                    Color = Color3.fromRGB(255, 255, 255),
+                    Transparency = 1,
+                    Thickness = 1.5,
+                    NumSides = 1000,
+                    Radius = 100, --> Change Circle Size Here
+                    Filled = false,
+                },
+            },
+        }
+         
+        -- Basic Silent-Aim [ DAHOOD GAMES ]
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox/Scripts/Basic%20Silent-Aim", true))()
+  	end    
+})
